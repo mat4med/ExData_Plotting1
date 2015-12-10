@@ -41,7 +41,7 @@ plot4  <- function() {
 		col = "black", xlab = "datetime", ylab = "Voltage")
 	## third plot
 	plot(dmy_hms(paste(p$Date, p$Time)), p$Sub_metering_1, type = "l", 
-		col = "black", xlab = "", ylab = "", 
+		col = "black", xlab = "", ylab = "Energy Sub Metering",
 		ylim = c(0, max(p$	Sub_metering_1, p$Sub_metering_2, p$Sub_metering_3)))
 	lines(dmy_hms(paste(p$Date, p$Time)), p$Sub_metering_2, type = "l", col = "red", xlab = "", ylab = "")
 	lines(dmy_hms(paste(p$Date, p$Time)), p$Sub_metering_3, type = "l", col = "blue", xlab = "", ylab = "")
